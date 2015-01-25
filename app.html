@@ -1,0 +1,68 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+
+    <title>SKELETON_APP | Welcome</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- [STYLE] -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!-- [!STYLE] -->
+</head>
+<body>
+
+<div id="header" class="jumbotron">
+    <div class="container">
+        <!-- [HEADER] -->
+        <div>
+            <h1>SKELETON_APP</h1>
+        </div>
+        <!-- [!HEADER] -->
+    </div>
+</div>
+
+<div class="container min-size">
+
+    <div id="msg"></div>
+
+    <!-- [CONTENT] -->
+    <div ng-view></div>
+    <div id="content" ui-view></div>
+    <div id="throbber" class="overlay">
+        <div>
+            <img src="img/loading.gif"/>
+        </div>
+    </div>
+    <!-- [!CONTENT]-->
+
+    <!-- [FOOTER] -->
+    <div id="footer">
+        KitnHiks Prod.
+    </div>
+    <!-- [!FOOTER] -->
+
+</div>
+<!-- [MODAL] -->
+<script type="text/ng-template" id="prompt.html">
+    <div class="modal-header">
+        <h3>{{ prompt.title }}</h3>
+    </div>
+    <div class="modal-body">
+        <p>{{ prompt.text }}</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" ng-click="ok()">{{ prompt.ok }}</button>
+        <button class="btn btn-warning cancel" ng-click="cancel()">{{ prompt.cancel }}</button>
+    </div>
+</script>
+<!-- [!MODAL] -->
+<!-- [SCRIPTS] -->
+<script src="js/angular.min.js"></script>
+<script src="js/angular-ui-router.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ui-bootstrap-tpls-0.11.0.min.js"></script>
+</body>
+</html>
